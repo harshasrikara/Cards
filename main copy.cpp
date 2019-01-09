@@ -33,10 +33,5 @@ int main() {
     
     cardManager Deck;
     Deck.generateDrawPile();
-    std::cout<<Deck<<std::endl;
-    
-  //  Deck.drawCard();
-    
-    std::cout<<Deck<<std::endl;
     return 0;
 }

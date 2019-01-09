@@ -21,7 +21,7 @@ class player
     private:
     std::string name;
     std::string gameName;
-    std::vector<card> hand;
+    std::vector<card *> hand;
     int score;
     
     public:
@@ -29,32 +29,34 @@ class player
     player();
     player(player&);
     player(std::string);
-    player(std::string, std::vector<card>);
+    player(std::string, std::vector<card *>);
     
     //assignment operator overload
-    const player& operator=(const player& other); //needs implementing/to avoid having pointers
+    const player& operator=(const player& other); //needs implementing/to avoid having pointers nvm
     
     //destructor
-    ~player();
+    ~player();        //could cause some serious pointer issues. Probably best to leave it to cardManager
+                      //could be unnessecary if cardManager class deals with all pointers.
     void emptyHand(); //deletes the card pointers in hand (to be implemented)
+    
     
     //getters
     int getScore() const;
     int getHandSize() const;
     std::string getName() const;
     std::string getGameName() const;
-    std::vector<card> getHand() const;
+    std::vector<card *> getHand() const;
     
     //setters
     void setName(std::string);
     void setGameName(std::string);
-    void createNewHand(std::vector<card>);
+    void createNewHand(std::vector<card *>);
     
     //modifiers
-    void addCard(card&); //gets reference from the draw pile
-    bool removeCard(card);
-    bool find(card);
-    bool find(bool (*playCard)(card),card);
+    void addCard(card*&); //gets reference from the draw pile
+    bool removeCard(card*);
+    bool find(card*);
+    bool find(bool (*playCard)(card*),card*);
     void sort();
     
     std::ostream& print(std::ostream &out);

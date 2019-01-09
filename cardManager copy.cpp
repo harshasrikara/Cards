@@ -39,29 +39,13 @@ cardManager::~cardManager()
 
 void cardManager::destroy()
 {
-    std::cout<<"sorted deck"<<std::endl;
+    std::cout<<"deleting sorted deck"<<std::endl;
     deleteDeck(sortedDeck);
-    std::cout<<"current deck"<<std::endl;
-    deleteDeck(currentDeck);
-    std::cout<<"draw deck"<<std::endl;
-    deleteDeck(drawPile);
-    std::cout<<"discard deck"<<std::endl;
-    deleteDeck(discardPile);
-    std::cout<<"all completed"<<std::endl;
 }
 void cardManager::deleteDeck(std::vector<card*> &deck)
 {
-    //this code needs to be revisited
-    //error caused as a without this check it tries to delete memory that was already
-    //freed or not part of the program
-    //likely caused when i = 0 for a second time at the end of a loop
-    //bool check = false;
     for(int i = (int)deck.size()-1; i > -1; i--)
-    {/*
-        if(check)
-        {
-            break;
-        }*/
+    {
         if(deck[i]!=nullptr)
         {
             std::cout<<i<<" "<<deck[i]<<" "<<*deck[i]<<" ";
@@ -69,15 +53,7 @@ void cardManager::deleteDeck(std::vector<card*> &deck)
             deck[i]=nullptr;
             std::cout<<deck[i]<<std::endl;
             deck.pop_back();
-        }/*
-        if(i==0)
-        {
-            check = true;
         }
-        if(check)
-        {
-            break;
-        }*/
     }
 }
 
@@ -88,10 +64,11 @@ void cardManager::generateDrawPile()
 }
 void cardManager::addDeck()
 {
-    insert(drawPile,"spades");
-    insert(drawPile,"clubs");
-    insert(drawPile,"diamonds");
-    insert(drawPile,"hearts");
+    insert(sortedDeck,"spades");
+    insert(sortedDeck,"clubs");
+    insert(sortedDeck,"diamonds");
+    insert(sortedDeck,"hearts");
+    drawPile = sortedDeck;
     drawPile = randomize(drawPile);
 }
 
@@ -117,14 +94,13 @@ const std::vector<card *>& cardManager::getDiscardPile() const
 card* cardManager::drawCard()
 {
     card * temp = drawPile[drawPile.size()-1];
-//    drawPile[drawPile.size()-1] = nullptr;
     drawPile.pop_back();
     return temp;
 }
 card* cardManager::drawDiscardPile()
 {
     card * temp = discardPile[discardPile.size()-1];
-    discardPile[discardPile.size()-1] = nullptr;
+//    discardPile[discardPile.size()-1] = nullptr;
     discardPile.pop_back();
     return temp;
 }

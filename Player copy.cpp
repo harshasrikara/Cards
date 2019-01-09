@@ -18,7 +18,7 @@ player::player(std::string newName)
     name = newName;
     score = 0;
 }
-player::player(std::string newName, std::vector<card > newHand)
+player::player(std::string newName, std::vector<card *> newHand)
 {
     name = newName;
     hand = newHand;
@@ -26,6 +26,7 @@ player::player(std::string newName, std::vector<card > newHand)
 }
 
 //assignment operator overload
+//needs to be written unless its not needed
 
 //destructor
 player::~player()
@@ -60,7 +61,7 @@ std::string player::getGameName() const
 {
     return gameName;
 }
-std::vector<card> player::getHand() const
+std::vector<card *> player::getHand() const
 {
     return hand;
 }
@@ -74,23 +75,23 @@ void player::setGameName(std::string data)
 {
     gameName = data;
 }
-void player::createNewHand(std::vector<card > newHand)
+void player::createNewHand(std::vector<card *> newHand)
 {
     hand = newHand;
 }
 
 //modifiers
-void player::addCard(card &newCard)
+void player::addCard(card* &newCard)
 {
     hand.push_back(newCard);
 }
-bool player::removeCard(card currentCard)
+bool player::removeCard(card* currentCard)
 {
     if(find(currentCard))
     {
         for(int i = 0; i<hand.size(); i++)
         {
-            if(hand[i]==currentCard)
+            if(*hand[i]==*currentCard) //is this correct? or should I compare pointers. probably correct to see if taget matches up
             {
                 hand.erase(hand.begin()+i);
                 return true;
@@ -99,18 +100,19 @@ bool player::removeCard(card currentCard)
     }
     return false;
 }
-bool player::find(card currentCard)
+bool player::find(card* currentCard)
 {
     for(int i = 0; i<hand.size(); i++)
     {
-        if(hand[i]==currentCard)
+        if(*hand[i]==*currentCard) //is this correct? or should I compare pointers. probably correct to see if taget matches up
         {
             return true;
         }
     }
     return false;
 }
-bool player::find(bool (*playCard)(card), card currentCard)
+//I need to get this function to do the erase part as well as anything else required. Needs to be coded.
+bool player::find(bool (*playCard)(card*), card* currentCard)
 {
     for(int i = 0; i<hand.size(); i++)
     {
@@ -126,7 +128,7 @@ std::ostream& player::print(std::ostream &out)
 {
     for( int i = 0; i < hand.size(); i++)
     {
-        out<<i<<" - "<<hand[i];
+        out<<i<<" - "<<*hand[i];
     }
     return out;
 }
@@ -135,7 +137,7 @@ std::ostream& player::print(std::ostream &out) const
 {
     for( int i = 0; i < hand.size(); i++)
     {
-        out<<i<<" - "<<hand[i];
+        out<<i<<" - "<<*hand[i];
     }
     return out;
 }

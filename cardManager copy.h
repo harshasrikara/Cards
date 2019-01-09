@@ -16,6 +16,7 @@
 #include <random>
 #include <chrono>
 #include <cstdlib>
+//#inclde <stack>
 
 class cardManager
 {
@@ -52,6 +53,8 @@ class cardManager
     const std::vector<card *>& getCurrentDeck() const;
     const std::vector<card *>& getDrawPile() const;
     const std::vector<card *>& getDiscardPile() const;
+    
+    
     
     //getSingleCard
     card* drawCard();
