@@ -11,6 +11,8 @@
 
 #include "cardManager.h"
 #include "Player.hpp"
+#include "listNode.hpp"
+#include "circularLinkedList.hpp"
 
 class gameManager
 {

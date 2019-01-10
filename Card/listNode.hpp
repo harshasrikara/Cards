@@ -18,7 +18,7 @@ class listNode
     friend class circularLinkedList;
     
 private:
-    player p;
+    mutable player p;
     listNode* pNext;
     listNode* pPrevious;
     bool check;
@@ -41,6 +41,10 @@ public:
     void setCheckTrue();
     void setCheckFalse();
     void flipCheckSign();
+    
+    //debug - gets the pointers for next and previous
+    void debug();
+    std::ostream& debug(std::ostream &out);
 };
 
 #endif /* listNode_hpp */

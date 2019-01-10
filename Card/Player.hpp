@@ -27,12 +27,12 @@ class player
     public:
     //constructor
     player();
-    player(player&);
+    player(const player &otherPlayer);
     player(std::string);
     player(std::string, std::vector<card *>);
     
     //assignment operator overload
-    const player& operator=(const player& other); //needs implementing/to avoid having pointers nvm
+    //const player& operator=(const player& other);
     
     //destructor
     ~player();        //could cause some serious pointer issues. Probably best to leave it to cardManager

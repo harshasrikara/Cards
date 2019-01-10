@@ -25,6 +25,13 @@ player::player(std::string newName, std::vector<card *> newHand)
     score = 0;
 }
 
+player::player(const player &otherPlayer)
+{
+    name = otherPlayer.getName();
+    hand = otherPlayer.getHand();
+    score = otherPlayer.getScore();
+}
+
 //assignment operator overload
 //needs to be written unless its not needed
 
@@ -33,7 +40,7 @@ player::~player()
 {
 //    emptyHand();
 }
-/*
+
 void player::emptyHand()
 {
     for(int i = 0; i < hand.size(); i++)
@@ -42,7 +49,7 @@ void player::emptyHand()
         hand[i] = nullptr;
     }
 }
-*/
+
 
 //getters
 int player::getScore() const

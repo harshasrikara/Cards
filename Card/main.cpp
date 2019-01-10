@@ -33,5 +33,7 @@ int main() {
     
     cardManager Deck;
     Deck.generateDrawPile();
+    
+    std::cout<<"everything works just fine"<<std::endl;
     return 0;
 }

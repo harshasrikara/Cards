@@ -39,7 +39,7 @@ cardManager::~cardManager()
 
 void cardManager::destroy()
 {
-    std::cout<<"deleting sorted deck"<<std::endl;
+    //std::cout<<"deleting sorted deck"<<std::endl;
     deleteDeck(sortedDeck);
 }
 void cardManager::deleteDeck(std::vector<card*> &deck)
@@ -48,10 +48,10 @@ void cardManager::deleteDeck(std::vector<card*> &deck)
     {
         if(deck[i]!=nullptr)
         {
-            std::cout<<i<<" "<<deck[i]<<" "<<*deck[i]<<" ";
+            //std::cout<<i<<" "<<deck[i]<<" "<<*deck[i]<<" ";
             delete deck[i];
             deck[i]=nullptr;
-            std::cout<<deck[i]<<std::endl;
+            //std::cout<<deck[i]<<std::endl;
             deck.pop_back();
         }
     }

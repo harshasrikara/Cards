@@ -19,7 +19,7 @@ void gameManager::restart()
     endGame();
     
     //game intro
-    std::cout<<"welcome to the game"<<std::endl;
+    std::cout<<"Welcome to the game"<<std::endl;
     
     //getNumber of Players
     std::cout<<"How many players will be joining us?"<<std::endl;
@@ -37,7 +37,7 @@ void gameManager::addPlayer()
 {
     std::string playerName;
     //    std::string playerGameName;
-    std::cin>>playerName;//>>playerGameName;
+    std::getline(std::cin,playerName);//>>playerGameName;
     player newPlayer(playerName);
     //   newPlayer.setGameName(playerGameName);
     players.push_back(newPlayer);
