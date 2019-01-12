@@ -20,7 +20,7 @@ class gameManager
     
     int direction = 1; //to move through the player array in a positive direction. Can also be -1
     cardManager Deck;  //Deck of Cards
-    std::vector<player> players; //needs to eventually transition to the circular linked list
+    circularLinkedList players;
     
     public:
     gameManager();

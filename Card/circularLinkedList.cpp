@@ -115,6 +115,23 @@ void circularLinkedList::pop()
     nodeCount--;
     firstNode = next; //could also be previous
 }
+
+//insert after and before
+void circularLinkedList::insert_after(listNode *existingNode, const player &newPlayer)
+{
+    listNode *node = new listNode(newPlayer);
+    listNode *nextNode = existingNode->getNext();
+    listNode *previousNode = existingNode;
+    
+    nextNode->setPrevious(node);
+    previousNode->setNext(node);
+    node->setNext(nextNode);
+    node->setPrevious(previousNode);
+}
+void circularLinkedList::insert_before(listNode *existingNode, const player &newPlayer)
+{
+    insert_after(existingNode->getPrevious(),newPlayer);
+}
 //getters
 listNode* circularLinkedList::getFirstNode() const
 {

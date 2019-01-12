@@ -26,39 +26,44 @@ void gameManager::restart()
     int numberOfPlayers;
     std::cin>>numberOfPlayers;
     
+    std::cout<<std::endl;
     //add Players
     for(int i = 0;i<numberOfPlayers;i++)
     {
         addPlayer();
     }
+    
+    players.debug(); //temp
 }
 
 void gameManager::addPlayer()
 {
-    std::string playerName;
+    std::string playerName ="";
     //    std::string playerGameName;
     std::cout<<"Enter player name"<<std::endl;
+    while(playerName=="")
+    {
     std::getline(std::cin,playerName);//>>playerGameName;
+    }
     player newPlayer(playerName);
     //   newPlayer.setGameName(playerGameName);
-    players.push_back(newPlayer);
+    players.push(newPlayer);
 }
 
 //empty the vector and reinitialize all variable
 void gameManager::endGame()
 {
-    while(players.size()!=0)
-    {
-        players.pop_back();
-    }
+    players.clearList();
     direction = 1;
 }
 void gameManager::shufflePlayerOrder()
 {
+    /*
     unsigned seed = (int)std::chrono::system_clock::now()
     .time_since_epoch()
     .count();
     shuffle (players.begin(), players.end(), std::default_random_engine(seed));
+     */
 }
 //playRound still has not been coded
 void gameManager::playRound(void (*playGame)(player &))
@@ -94,11 +99,8 @@ std::ostream& gameManager::print(std::ostream &out)
     out<<"/nDiscard Pile"<<std::endl;
     Deck.print(Deck.getDiscardPile(),out);
     
-    for(int i = 0; i<players.size();i++)
-    {
-        out<<players[i]<<std::endl;
-    }
     return out;
+    //return players.print(out);
 }
 std::ostream& gameManager::print(std::ostream &out) const
 {
@@ -107,11 +109,8 @@ std::ostream& gameManager::print(std::ostream &out) const
     out<<"/nDiscard Pile"<<std::endl;
     Deck.print(Deck.getDiscardPile(),out);
     
-    for(int i = 0; i<players.size();i++)
-    {
-        out<<players[i]<<std::endl;
-    }
     return out;
+    //return players.print(out);
 }
 
 std::ostream& operator<<(std::ostream &out, const gameManager &game)

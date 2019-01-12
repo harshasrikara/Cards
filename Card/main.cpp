@@ -36,8 +36,8 @@ int main() {
     cardManager Deck;
     Deck.generateDrawPile();
     
-    //gameManager game;
-    
+    gameManager game;
+    /*
     player p1("apple");
     player p2("grape");
     player p3("berry");
@@ -51,7 +51,7 @@ int main() {
     circ.push(p4);
     
     circ.debug();
-    
+    */
     std::cout<<"everything works just fine"<<std::endl;
     return 0;
 }
