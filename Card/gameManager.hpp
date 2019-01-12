@@ -32,7 +32,7 @@ class gameManager
     void shufflePlayerOrder();
     
     void playRound(void (*playGame)(player&));
-    void playRound(void (*playGame)(player&,card)); //for a variant that involves playing a card not belonging to a player
+    void playRound(void (*playGame)(player&,card*)); //for a variant that involves playing a card not belonging to a player
     
     //print functions
     void print();

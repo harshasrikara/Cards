@@ -20,11 +20,15 @@ class circularLinkedList
     std::size_t nodeCount;
     
     public:
+    //constructor and destructor/helper function
     circularLinkedList();
     circularLinkedList(circularLinkedList&);
     circularLinkedList(listNode*);
+    ~circularLinkedList();
+    void clearList();
     
     //insertion
+    void insertNode(circularLinkedList&, listNode*); //used by traverse and copy constructor
     void push(const player&);
     void pop();
     
@@ -45,12 +49,14 @@ class circularLinkedList
     bool erase(player);
     bool erase(std::string); //player name maybe?
     
-    //count of nodes
+    //count of nodes/ getters
+    listNode* getFirstNode() const;
     std::size_t getNodeCount() const;
     bool empty() const; //if(nodeCount == 0);
     
     //traverse
     void traverse(void (*doFunction)(listNode*));
+    void traverse(void (*doFunction)(circularLinkedList&, listNode*),circularLinkedList*);
     std::size_t traverse(); //gets size of circular linked list through traversal
     
     //debug and print

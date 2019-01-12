@@ -37,6 +37,7 @@ void gameManager::addPlayer()
 {
     std::string playerName;
     //    std::string playerGameName;
+    std::cout<<"Enter player name"<<std::endl;
     std::getline(std::cin,playerName);//>>playerGameName;
     player newPlayer(playerName);
     //   newPlayer.setGameName(playerGameName);
@@ -59,7 +60,7 @@ void gameManager::shufflePlayerOrder()
     .count();
     shuffle (players.begin(), players.end(), std::default_random_engine(seed));
 }
-
+//playRound still has not been coded
 void gameManager::playRound(void (*playGame)(player &))
 {
     std::cout<<"Enter Y/N"<<std::endl;

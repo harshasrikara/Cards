@@ -13,7 +13,7 @@
 		F7C10AA221E69411009AE974 /* gameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7C10A9A21E69411009AE974 /* gameManager.cpp */; };
 		F7C10AA321E69411009AE974 /* listNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7C10A9B21E69411009AE974 /* listNode.cpp */; };
 		F7C10AA421E69411009AE974 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7C10AA021E69411009AE974 /* Player.cpp */; };
-		F7C10AA521E69411009AE974 /* circularLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7C10AA121E69411009AE974 /* circularLinkedList.cpp */; };
+		F7C4A03121E7D4A200B04E33 /* circularLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7C4A03021E7D4A200B04E33 /* circularLinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,11 +38,11 @@
 		F7C10A9A21E69411009AE974 /* gameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gameManager.cpp; sourceTree = "<group>"; };
 		F7C10A9B21E69411009AE974 /* listNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = listNode.cpp; sourceTree = "<group>"; };
 		F7C10A9C21E69411009AE974 /* listNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = listNode.hpp; sourceTree = "<group>"; };
-		F7C10A9D21E69411009AE974 /* circularLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = circularLinkedList.hpp; sourceTree = "<group>"; };
 		F7C10A9E21E69411009AE974 /* gameManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gameManager.hpp; sourceTree = "<group>"; };
 		F7C10A9F21E69411009AE974 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		F7C10AA021E69411009AE974 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		F7C10AA121E69411009AE974 /* circularLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circularLinkedList.cpp; sourceTree = "<group>"; };
+		F7C4A02F21E7D4A100B04E33 /* circularLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = circularLinkedList.hpp; sourceTree = "<group>"; };
+		F7C4A03021E7D4A200B04E33 /* circularLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circularLinkedList.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 				F7C10A9A21E69411009AE974 /* gameManager.cpp */,
 				F7C10A9C21E69411009AE974 /* listNode.hpp */,
 				F7C10A9B21E69411009AE974 /* listNode.cpp */,
-				F7C10A9D21E69411009AE974 /* circularLinkedList.hpp */,
-				F7C10AA121E69411009AE974 /* circularLinkedList.cpp */,
+				F7C4A02F21E7D4A100B04E33 /* circularLinkedList.hpp */,
+				F7C4A03021E7D4A200B04E33 /* circularLinkedList.cpp */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 				F7C10AA421E69411009AE974 /* Player.cpp in Sources */,
 				F7C10AA221E69411009AE974 /* gameManager.cpp in Sources */,
 				F79E882621D194F00093C6FF /* cardManager.cpp in Sources */,
-				F7C10AA521E69411009AE974 /* circularLinkedList.cpp in Sources */,
+				F7C4A03121E7D4A200B04E33 /* circularLinkedList.cpp in Sources */,
 				F79E882221D15F7B0093C6FF /* card.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

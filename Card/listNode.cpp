@@ -15,14 +15,14 @@ listNode::listNode()
     pNext = nullptr;
     pPrevious = nullptr;
 }
-listNode::listNode(player &p1)
+listNode::listNode(const player &p1)
 {
     p = p1;
     check = false;
     pNext = nullptr;
     pPrevious = nullptr;
 }
-listNode::listNode(player &p1, listNode *next,listNode *previous)
+listNode::listNode(const player &p1, listNode *next,listNode *previous)
 {
     p = p1;
     check = false;
@@ -77,7 +77,7 @@ void listNode::debug()
 }
 std::ostream& listNode::debug(std::ostream &out)
 {
-    out<<"BEGINNING DEBUG"<<std::endl;
-    out<<"Player Name - "<<p.getName()<<"\npreviousNode - "<<pPrevious<<" nextNode - "<<pNext<<" "<<std::endl;
+    out<<"Player Name - "<<p.getName()<<" current node - "<<this
+    << "\npreviousNode - "<<pPrevious<<" nextNode - "<<pNext<<" \n"<<std::endl;
     return out;
 }

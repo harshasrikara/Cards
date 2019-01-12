@@ -24,7 +24,7 @@ player::player(std::string newName, std::vector<card *> newHand)
     hand = newHand;
     score = 0;
 }
-
+//copy constructor
 player::player(const player &otherPlayer)
 {
     name = otherPlayer.getName();

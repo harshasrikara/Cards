@@ -26,8 +26,8 @@ private:
 public:
     //constructors
     listNode();
-    listNode(player&);
-    listNode(player&,listNode*,listNode*);
+    listNode(const player&);
+    listNode(const player&,listNode*,listNode*);
     
     //getters
     listNode* getNext() const;
