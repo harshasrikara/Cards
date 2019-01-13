@@ -16,27 +16,11 @@
 int main() {
     // insert code here...
     
-    /*
-    card Cone("hearts",6);
-    card Ctwo("spades",12);
-    std::cout<< Cone;
-    std::cout<< Ctwo;
-    
-    if(Cone == Ctwo)
-    {
-        std::cout << "they match" << std::endl;
-    }
-    else
-    {
-        std::cout << "they dont match" << std::endl;
-    }
-     */
-    
-    
     cardManager Deck;
     Deck.generateDrawPile();
     
-    gameManager game;
+    //gameManager game;
+    
     /*
     player p1("apple");
     player p2("grape");
@@ -45,13 +29,16 @@ int main() {
     
     circularLinkedList circ;
     
-    circ.push(p1);
-    circ.push(p2);
-    circ.push(p3);
-    circ.push(p4);
+    //circ.push(p1);
+    //circ.push(p2);
+    //circ.push(p3);
+    //circ.push(p4);
     
     circ.debug();
+    
+    std::cout<<circ.traverse()<<std::endl;
     */
+    
     std::cout<<"everything works just fine"<<std::endl;
     return 0;
 }

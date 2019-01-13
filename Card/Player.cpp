@@ -149,6 +149,23 @@ std::ostream& player::print(std::ostream &out) const
     return out;
 }
 
+//operator overloads
+bool player::operator==(const player &entry) const
+{
+    if(name == entry.getName())
+    {
+        return true;
+    }
+    return false;
+}
+bool player::operator!=(const player &entry) const
+{
+    if(name != entry.getName())
+    {
+        return true;
+    }
+    return false;
+}
 std::ostream& operator<<(std::ostream &out, const player &entry)
 {
     out<<entry.getName()<<std::endl;

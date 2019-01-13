@@ -70,6 +70,17 @@ void listNode::flipCheckSign()
     check = !check;
 }
 
+std::ostream& listNode::print(std::ostream &out)
+{
+    out<<p<<std::endl;
+    return out;
+}
+std::ostream& listNode::print(std::ostream &out) const
+{
+    out<<p<<std::endl;
+    return out;
+}
+
 //debug functions
 void listNode::debug()
 {

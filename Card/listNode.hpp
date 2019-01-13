@@ -42,6 +42,9 @@ public:
     void setCheckFalse();
     void flipCheckSign();
     
+    std::ostream& print(std::ostream &out);
+    std::ostream& print(std::ostream &out) const;
+    
     //debug - gets the pointers for next and previous
     void debug();
     std::ostream& debug(std::ostream &out);

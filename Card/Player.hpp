@@ -62,6 +62,10 @@ class player
     std::ostream& print(std::ostream &out);
     std::ostream& print(std::ostream &out) const;
     
+    //comparison operator overload
+    bool operator==(const player &entry) const;
+    bool operator!=(const player &entry) const;
+    
 };
 
 std::ostream& operator<<(std::ostream &out, const player &entry);

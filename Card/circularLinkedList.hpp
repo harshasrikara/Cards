@@ -42,7 +42,7 @@ class circularLinkedList
     
     //find functions
     bool find(const player&);
-    bool find(bool (*doFunction)(listNode*),const player&); //probably shouldn't be const
+    bool find(bool (*doFunction)(listNode*), player&); 
     
     //erase functions
     bool erase(listNode*); //to be used by find function
