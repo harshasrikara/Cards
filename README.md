@@ -21,4 +21,4 @@ These are classes that you will likely never have to handle. These classes were 
 - Decide on what you want the game to be
 - Create a simple function that performs that game action on each player
 - Pass that function to the gameManager function playRound()
-- Enjoy playing the gamer
+- Enjoy playing the game
