@@ -1,5 +1,5 @@
 # Cards
-A Unique Solution to the *Millions* of Playing Card Games
+A Unique Solution to the *Millions* of Playing Card Games!
 ### Inspiration
 This project was inspired by initially wanting to build a software methodology to track points while playing a physical card game with multiple players. However, as the coding process began, it eventually sprouted into a full fledged card game playing system. More importly, one core design feature that was implemented was to have support for any variant of any card game. The code includes several classes that allow the user to easily create their own custom game with any set of arbitrary rules without any restrictions. 
 ### Code and Class Structure
