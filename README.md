@@ -24,4 +24,4 @@ These are classes that you will likely never have to handle. These classes were 
 - Enjoy playing the game
 
 ##### Side notes
-This project was an attempt at learning and using many new ideas and data structures. The circular linked list was for practice in building data structures. The overloading of most operators were for understanding why they are present and their use cases. The idea of having a function that will be written and passed in for different version of the game was an attempt at the open closed principle. There are many possible improvements to this game that can be made.
+This project was an attempt at learning and using many new ideas and data structures. The circular linked list was for practice in building data structures. The overloading of most operators were for understanding why they are present and their use cases. The idea of having a function that will be written and passed in for different version of the game was an attempt at the open closed principle. There are many possible improvements to this game that can be made. Make yours today and open a pull request.
